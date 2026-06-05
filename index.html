@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -1233,9 +1233,6 @@ footer {
 @media (max-width: 768px) {
   nav { display: none; }
   .hamburger { display: flex; }
-  .lang-toggle { display: flex; }
-  .lang-toggle button { padding: 5px 10px; font-size: 0.75rem; }
-}
   .hero-grid { grid-template-columns: 1fr; }
   .hero-panel { margin-top: 0; }
   .problem-grid { grid-template-columns: 1fr; }
@@ -1264,8 +1261,11 @@ footer {
   .metric-label { font-size: 0.78rem; }
   .process-grid { grid-template-columns: 1fr; }
   .header-inner { gap: 8px; }
-  .btn-primary { padding: 9px 14px; font-size: 0.8rem; }
-  .lang-toggle { display: flex; }
+  .btn-primary.header-cta { padding: 7px 11px; font-size: 0.72rem; white-space: nowrap; }
+  .lang-toggle { padding: 2px; gap: 1px; }
+  .lang-btn { padding: 4px 8px; font-size: 0.68rem; }
+  .logo-curve { display: none; }
+  .logo-main { font-size: 1.45rem; }
   .results-shell { padding: 28px 16px; }
   .hero-panel { padding: 22px; }
   .section { padding: 56px 0; }
@@ -1296,9 +1296,9 @@ footer {
 
       <nav>
         <a href="#services" data-i18n="nav_services">Services</a>
-        <a href="#resultats" data-i18n="nav_results">Résultats</a>
+        <a href="#resultats" data-i18n="nav_results">Results</a>
         <a href="#processus" data-i18n="nav_process">Process</a>
-        <a href="#secteurs" data-i18n="nav_sectors">Secteurs</a>
+        <a href="#secteurs" data-i18n="nav_sectors">Industries</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
 
@@ -1307,7 +1307,7 @@ footer {
           <button class="lang-btn" id="btn-fr" onclick="setLang('fr')">FR</button>
           <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
         </div>
-        <a href="#contact" class="btn-primary" data-i18n="header_cta">Démarrer un projet</a>
+        <a href="#contact" class="btn-primary header-cta" data-i18n="header_cta">Start a Project</a>
         <button class="hamburger" id="hamburger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -1316,9 +1316,9 @@ footer {
   </div>
   <nav class="mobile-nav" id="mobile-nav">
     <a href="#services" data-i18n="nav_services">Services</a>
-    <a href="#resultats" data-i18n="nav_results">Résultats</a>
+    <a href="#resultats" data-i18n="nav_results">Results</a>
     <a href="#processus" data-i18n="nav_process">Process</a>
-    <a href="#secteurs" data-i18n="nav_sectors">Secteurs</a>
+    <a href="#secteurs" data-i18n="nav_sectors">Industries</a>
     <a href="#contact" data-i18n="nav_contact">Contact</a>
   </nav>
 </header>
@@ -1329,18 +1329,18 @@ footer {
     <div class="hero-grid">
       <div class="hero-left reveal">
         <div class="hero-eyebrow">Meta Ads · TikTok · AI Automation</div>
-        <h1 class="hero-h1" data-i18n="hero_h1">Des campagnes qui convertissent. Des systèmes qui travaillent pour vous.</h1>
-        <p class="hero-subtitle" data-i18n="hero_subtitle">Nous combinons publicités performantes et automation IA pour transformer chaque euro investi en résultat mesurable.</p>
+        <h1 class="hero-h1" data-i18n="hero_h1">Campaigns that convert. Systems that work for you.</h1>
+        <p class="hero-subtitle" data-i18n="hero_subtitle">We combine high-performance ads and AI automation to turn every invested euro into measurable results.</p>
         <div class="hero-ctas">
-          <a href="#resultats" class="btn-primary" data-i18n="hero_cta1">Voir nos résultats →</a>
-          <a href="#contact" class="btn-outline" data-i18n="hero_cta2">Travailler ensemble</a>
+          <a href="#resultats" class="btn-primary" data-i18n="hero_cta1">See our results →</a>
+          <a href="#contact" class="btn-outline" data-i18n="hero_cta2">Work together</a>
         </div>
-        <div class="trust-badge" data-i18n="hero_trust">6,000,000+ personnes touchées · $5,800+ budget géré</div>
+        <div class="trust-badge" data-i18n="hero_trust">6,000,000+ people reached · $5,800+ budget managed</div>
       </div>
 
       <div class="hero-panel reveal" style="transition-delay:0.15s">
         <div class="panel-kicker">
-          <span data-i18n="panel_kicker">Système d'acquisition IA</span>
+          <span data-i18n="panel_kicker">AI Acquisition System</span>
           <span class="panel-days"><span class="wf-pulse"></span> Live</span>
         </div>
 
@@ -1404,7 +1404,7 @@ footer {
         </div>
 
         <div class="panel-stat">$0.07</div>
-        <div class="panel-stat-label" data-i18n="panel_stat_label">Meilleur coût par conversation</div>
+        <div class="panel-stat-label" data-i18n="panel_stat_label">Best cost per conversation</div>
         <div class="panel-chips">
           <span class="chip">Meta Ads</span>
           <span class="chip">TikTok Ads</span>
@@ -1420,33 +1420,33 @@ footer {
 <section id="problem" class="section">
   <div class="container">
     <div class="reveal">
-      <div class="eyebrow" data-i18n="problem_eyebrow">Le vrai problème</div>
-      <h2 data-i18n="problem_h2">Vous dépensez en pub. Mais combien de leads convertissent vraiment ?</h2>
+      <div class="eyebrow" data-i18n="problem_eyebrow">The real problem</div>
+      <h2 data-i18n="problem_h2">You spend on ads. But how many leads actually convert?</h2>
     </div>
     <div class="problem-grid" style="margin-top:48px">
       <div class="problem-card reveal">
         <div class="problem-icon">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </div>
-        <h3 data-i18n="prob1_title">Vos prospects écrivent à 22h — personne ne répond</h3>
-        <p data-i18n="prob1_body">Vous perdez des opportunités chaudes parce que la réponse n'arrive pas au bon moment.</p>
+        <h3 data-i18n="prob1_title">Your prospects write at 10pm — nobody answers</h3>
+        <p data-i18n="prob1_body">You lose hot opportunities because the response doesn't arrive in time.</p>
       </div>
       <div class="problem-card reveal" style="transition-delay:0.1s">
         <div class="problem-icon">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-        <h3 data-i18n="prob2_title">Vous ne savez pas combien coûte vraiment chaque client</h3>
-        <p data-i18n="prob2_body">Sans tracking propre, impossible de distinguer ce qui rapporte de ce qui consume le budget.</p>
+        <h3 data-i18n="prob2_title">You don't know how much each client really costs</h3>
+        <p data-i18n="prob2_body">Without proper tracking, impossible to tell what generates returns from what burns budget.</p>
       </div>
       <div class="problem-card reveal" style="transition-delay:0.2s">
         <div class="problem-icon">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="var(--accent)" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
         </div>
-        <h3 data-i18n="prob3_title">Votre agence fait de la visibilité, pas des résultats</h3>
-        <p data-i18n="prob3_body">Des impressions et des likes ne paient pas les factures. Ce qu'il faut, ce sont des conversions.</p>
+        <h3 data-i18n="prob3_title">Your agency drives visibility, not results</h3>
+        <p data-i18n="prob3_body">Impressions and likes don't pay bills. What you need are conversations and conversions.</p>
       </div>
     </div>
-    <div class="transition-line reveal" data-i18n="problem_transition">C'est exactement ce qu'on règle.</div>
+    <div class="transition-line reveal" data-i18n="problem_transition">That's exactly what we fix.</div>
   </div>
 </section>
 
@@ -1454,12 +1454,12 @@ footer {
 <section id="services" class="section" style="padding-top:0">
   <div class="container">
     <div class="services-header reveal">
-      <div class="eyebrow" data-i18n="services_eyebrow">Ce qu'on fait</div>
-      <h2 data-i18n="services_h2">Tout ce qu'il faut pour scaler votre acquisition.</h2>
-      <p data-i18n="services_subtitle">Publicité performante, automation IA, stratégie créative — sous un seul toit.</p>
+      <div class="eyebrow" data-i18n="services_eyebrow">What we do</div>
+      <h2 data-i18n="services_h2">Everything needed to scale your acquisition.</h2>
+      <p data-i18n="services_subtitle">Performance advertising, AI automation, creative strategy — under one roof.</p>
     </div>
 
-    <div class="sub-label reveal" data-i18n="sub_core">Services Core</div>
+    <div class="sub-label reveal" data-i18n="sub_core">Core Services</div>
     <div class="grid-4">
       <div class="service-card reveal">
         <div class="service-icon">
@@ -1467,7 +1467,7 @@ footer {
         </div>
         <div class="service-kicker">Paid Ads</div>
         <h3 data-i18n="svc1_title">Gestion Ads — Meta & TikTok</h3>
-        <p data-i18n="svc1_body">Campagnes Facebook, Instagram et TikTok pilotées par la donnée. Prospection, retargeting, scaling ROAS. Chaque euro est tracké et optimisé.</p>
+        <p data-i18n="svc1_body">Data-driven Facebook, Instagram and TikTok campaigns. Prospecting, retargeting, ROAS scaling. Every euro tracked and optimized.</p>
       </div>
       <div class="service-card reveal" style="transition-delay:0.08s">
         <div class="service-icon">
@@ -1475,7 +1475,7 @@ footer {
         </div>
         <div class="service-kicker">AI Systems</div>
         <h3 data-i18n="svc2_title">Chatbot & Automation IA</h3>
-        <p data-i18n="svc2_body">Chatbots IA multicanaux (Messenger, WhatsApp, Instagram DM). Qualification automatique des leads 24h/24. Connecté à votre CRM.</p>
+        <p data-i18n="svc2_body">Multichannel AI chatbots (Messenger, WhatsApp, Instagram DM). Automatic lead qualification 24/7. Connected to your CRM.</p>
       </div>
       <div class="service-card reveal" style="transition-delay:0.16s">
         <div class="service-icon">
@@ -1483,34 +1483,34 @@ footer {
         </div>
         <div class="service-kicker">Strategy</div>
         <h3 data-i18n="svc3_title">Consulting & Audit</h3>
-        <p data-i18n="svc3_body">Audit complet de vos comptes publicitaires. Tracking CAPI, attribution, recommandations stratégiques et roadmap de croissance personnalisée.</p>
+        <p data-i18n="svc3_body">Full ad account audit. CAPI tracking, attribution, strategic recommendations and custom growth roadmap.</p>
       </div>
       <div class="service-card reveal" style="transition-delay:0.24s">
         <div class="service-icon">
           <svg viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
         </div>
         <div class="service-kicker">Content</div>
-        <h3 data-i18n="svc4_title">Stratégie Créative</h3>
+        <h3 data-i18n="svc4_title">Creative Strategy</h3>
         <p data-i18n="svc4_body">Scripts publicitaires, visuels IA, vidéos Reels & TikTok. Hooks, angles et formats testés — la créativité au service de la performance.</p>
       </div>
     </div>
 
-    <div class="sub-label reveal" style="opacity:0.7" data-i18n="sub_additional">Services Complémentaires</div>
+    <div class="sub-label reveal" style="opacity:0.7" data-i18n="sub_additional">Additional Services</div>
     <div class="grid-3">
       <div class="service-card secondary reveal">
         <div class="service-kicker">Social Media</div>
-        <h3 data-i18n="svc5_title">Création de Contenu</h3>
-        <p data-i18n="svc5_body">Posts, vidéos et Reels créés avec l'IA. Contenu optimisé pour l'engagement et la conversion sur chaque plateforme.</p>
+        <h3 data-i18n="svc5_title">Content Creation</h3>
+        <p data-i18n="svc5_body">Posts, videos and Reels created with AI. Content optimized for engagement and conversion on every platform.</p>
       </div>
       <div class="service-card secondary reveal" style="transition-delay:0.1s">
         <div class="service-kicker">Conversion</div>
         <h3 data-i18n="svc6_title">Landing Pages</h3>
-        <p data-i18n="svc6_body">Pages de conversion haute performance pour transformer le trafic payant en clients. Design, copywriting et A/B testing inclus.</p>
+        <p data-i18n="svc6_body">High-performance conversion pages to turn paid traffic into clients. Design, copywriting and A/B testing included.</p>
       </div>
       <div class="service-card secondary reveal" style="transition-delay:0.2s">
         <div class="service-kicker">Nurturing</div>
-        <h3 data-i18n="svc7_title">Séquences Email</h3>
-        <p data-i18n="svc7_body">Séquences d'emails automatisées pour nurture les leads, relancer les prospects froids et convertir sur la durée.</p>
+        <h3 data-i18n="svc7_title">Email Sequences</h3>
+        <p data-i18n="svc7_body">Automated email sequences to nurture leads, re-engage cold prospects and convert over time.</p>
       </div>
     </div>
   </div>
@@ -1521,51 +1521,51 @@ footer {
   <div class="container">
     <div class="results-shell">
       <div class="results-header reveal">
-        <div class="eyebrow" data-i18n="results_eyebrow">Preuves de performance</div>
-        <h2 data-i18n="results_h2">Résultats réels. Chiffres réels.</h2>
+        <div class="eyebrow" data-i18n="results_eyebrow">Performance proof</div>
+        <h2 data-i18n="results_h2">Real results. Real numbers.</h2>
         <p data-i18n="results_subtitle">Europe · Golfe & Moyen-Orient · Afrique du Nord — campagnes actives</p>
       </div>
 
       <div class="metrics-grid">
         <div class="metric-card reveal counter-wrap" data-target="6000000" data-suffix="+" data-label-fr="personnes touchées" data-label-en="people reached">
           <span class="metric-value" id="c1">0</span>
-          <span class="metric-label" data-i18n="m1_label">personnes touchées</span>
+          <span class="metric-label" data-i18n="m1_label">people reached</span>
         </div>
         <div class="metric-card reveal counter-wrap" style="transition-delay:0.1s" data-target="5800" data-prefix="$" data-suffix="+" data-label-fr="budget géré" data-label-en="budget managed">
           <span class="metric-value" id="c2">$0</span>
-          <span class="metric-label" data-i18n="m2_label">budget géré</span>
+          <span class="metric-label" data-i18n="m2_label">budget managed</span>
         </div>
         <div class="metric-card reveal counter-wrap" style="transition-delay:0.2s" data-target="0.07" data-prefix="$" data-decimals="2" data-label-fr="meilleur coût/conversation" data-label-en="best cost/conversation">
           <span class="metric-value" id="c3">$0</span>
-          <span class="metric-label" data-i18n="m3_label">meilleur coût par conversation</span>
+          <span class="metric-label" data-i18n="m3_label">best cost per conversation</span>
         </div>
         <div class="metric-card reveal counter-wrap" style="transition-delay:0.3s" data-target="340" data-suffix="+" data-label-fr="leads en une campagne" data-label-en="leads in one campaign">
           <span class="metric-value" id="c4">0</span>
-          <span class="metric-label" data-i18n="m4_label">leads en une campagne</span>
+          <span class="metric-label" data-i18n="m4_label">leads in one campaign</span>
         </div>
       </div>
 
       <div class="cases-grid">
         <div class="case-card reveal">
           <div class="case-pills">
-            <span class="pill" data-i18n="case1_pill1">Agence de voyage</span>
+            <span class="pill" data-i18n="case1_pill1">Travel Agency</span>
             <span class="pill accent">Meta Ads — Messages</span>
           </div>
-          <h3 data-i18n="case1_title">Campagnes Messaging — Destinations été</h3>
-          <p data-i18n="case1_body">340 leads à $0.13/conv. 335 leads à $0.14/conv. Audiences précises, optimisation par coût réel. Résultats en 21 jours.</p>
+          <h3 data-i18n="case1_title">Messaging Campaigns — Summer Destinations</h3>
+          <p data-i18n="case1_body">340 leads at $0.13/conv. 335 leads at $0.14/conv. Precise audiences, optimization by real cost. Results in 21 days.</p>
         </div>
         <div class="case-card reveal" style="transition-delay:0.1s">
           <div class="case-pills">
-            <span class="pill" data-i18n="case2_pill1">Centre de formation</span>
+            <span class="pill" data-i18n="case2_pill1">Training Center</span>
             <span class="pill accent">Meta Ads — Engagement</span>
           </div>
-          <h3 data-i18n="case2_title">Campagnes Messaging + Engagement</h3>
-          <p data-i18n="case2_body">436 conversations à $0.15/conv. Reach : 259,000 personnes. Structure pensée pour ouvrir la discussion, puis convertir.</p>
+          <h3 data-i18n="case2_title">Messaging + Engagement Campaigns</h3>
+          <p data-i18n="case2_body">436 conversations at $0.15/conv. Reach: 259,000 people. Built to open conversations, then convert.</p>
         </div>
       </div>
 
       <div class="note-card reveal">
-        <span data-i18n="results_note">Ces résultats ont été obtenus sans automation complète. Avec notre système IA de qualification automatique, le taux de conversion est 2 à 3× supérieur.</span>
+        <span data-i18n="results_note">These results were achieved without full automation. With our AI auto-qualification system, conversion rate is 2-3× higher.</span>
       </div>
     </div>
   </div>
@@ -1575,29 +1575,29 @@ footer {
 <section id="processus">
   <div class="container" style="padding:100px 24px">
     <div class="process-header reveal">
-      <div class="eyebrow" data-i18n="process_eyebrow">Le cadre</div>
-      <h2 data-i18n="process_h2">Comment on travaille ensemble.</h2>
+      <div class="eyebrow" data-i18n="process_eyebrow">The framework</div>
+      <h2 data-i18n="process_h2">How we work together.</h2>
     </div>
     <div class="process-grid">
       <div class="process-step reveal">
         <div class="step-number">1</div>
-        <h3 data-i18n="step1_title">Appel découverte</h3>
-        <p data-i18n="step1_body">30 minutes pour comprendre votre marché, vos objectifs et vos contraintes. On définit ensemble la roadmap.</p>
+        <h3 data-i18n="step1_title">Discovery call</h3>
+        <p data-i18n="step1_body">30 minutes to understand your market, goals and constraints. We define the roadmap together.</p>
       </div>
       <div class="process-step reveal" style="transition-delay:0.1s">
         <div class="step-number">2</div>
         <h3 data-i18n="step2_title">Audit & Stratégie</h3>
-        <p data-i18n="step2_body">Analyse de vos comptes, tracking CAPI, audiences, créas. On pose les fondations avant de dépenser le moindre euro.</p>
+        <p data-i18n="step2_body">Account analysis, CAPI tracking, audiences, creatives. We lay the foundation before spending a single euro.</p>
       </div>
       <div class="process-step reveal" style="transition-delay:0.2s">
         <div class="step-number">3</div>
         <h3 data-i18n="step3_title">Setup & Lancement</h3>
-        <p data-i18n="step3_body">Création des campagnes, landing pages, chatbots et automatisations. Tout est connecté, testé et prêt.</p>
+        <p data-i18n="step3_body">Campaign creation, landing pages, chatbots and automations. Everything connected, tested and ready.</p>
       </div>
       <div class="process-step reveal" style="transition-delay:0.3s">
         <div class="step-number">4</div>
         <h3 data-i18n="step4_title">Optimisation & Scale</h3>
-        <p data-i18n="step4_body">Tests A/B continus, scaling des campagnes performantes, reporting hebdomadaire. On pilote ce qui compte.</p>
+        <p data-i18n="step4_body">Continuous A/B tests, scaling winning campaigns, weekly reporting. We track what matters.</p>
       </div>
     </div>
   </div>
@@ -1607,9 +1607,9 @@ footer {
 <section id="secteurs" class="section">
   <div class="container">
     <div class="sectors-header reveal">
-      <div class="eyebrow" data-i18n="sectors_eyebrow">Secteurs</div>
-      <h2 data-i18n="sectors_h2">Les secteurs où on crée le plus de valeur.</h2>
-      <p data-i18n="sectors_subtitle">Spécialisés sur 4 secteurs prioritaires — ouverts à tous les business qui ont besoin de leads et de croissance.</p>
+      <div class="eyebrow" data-i18n="sectors_eyebrow">Industries</div>
+      <h2 data-i18n="sectors_h2">The industries where we create the most value.</h2>
+      <p data-i18n="sectors_subtitle">Specialized in 4 priority sectors — open to any business that needs leads and growth.</p>
     </div>
     <div class="sectors-grid">
       <div class="sector-card reveal">
@@ -1617,16 +1617,16 @@ footer {
           <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         </div>
         <div class="service-kicker" style="margin-bottom:8px">Real Estate</div>
-        <h3 data-i18n="sec1_title">Immobilier</h3>
-        <p data-i18n="sec1_body">Agents, mandataires, promoteurs. Leads acheteurs et vendeurs qualifiés automatiquement.</p>
+        <h3 data-i18n="sec1_title">Real Estate</h3>
+        <p data-i18n="sec1_body">Agents, brokers, developers. Buyer and seller leads qualified automatically.</p>
       </div>
       <div class="sector-card reveal" style="transition-delay:0.1s">
         <div class="sector-icon">
           <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
         </div>
         <div class="service-kicker" style="margin-bottom:8px">Travel</div>
-        <h3 data-i18n="sec2_title">Agences de voyage</h3>
-        <p data-i18n="sec2_body">Campagnes destinations, chatbot réservation, leads qualifiés par budget et dates.</p>
+        <h3 data-i18n="sec2_title">Travel Agencies</h3>
+        <p data-i18n="sec2_body">Destination campaigns, booking chatbot, leads qualified by budget and dates.</p>
       </div>
       <div class="sector-card reveal" style="transition-delay:0.2s">
         <div class="sector-icon">
@@ -1634,7 +1634,7 @@ footer {
         </div>
         <div class="service-kicker" style="margin-bottom:8px">Wellness</div>
         <h3 data-i18n="sec3_title">Esthétique & Beauté</h3>
-        <p data-i18n="sec3_body">Cliniques laser, centres bien-être. Agenda rempli automatiquement.</p>
+        <p data-i18n="sec3_body">Laser clinics, wellness centers. Calendar filled automatically.</p>
       </div>
       <div class="sector-card reveal" style="transition-delay:0.3s">
         <div class="sector-icon">
@@ -1642,15 +1642,15 @@ footer {
         </div>
         <div class="service-kicker" style="margin-bottom:8px">Education</div>
         <h3 data-i18n="sec4_title">Formation & Éducation</h3>
-        <p data-i18n="sec4_body">Écoles privées, centres de formation. Inscriptions pilotées par la data.</p>
+        <p data-i18n="sec4_body">Private schools, training centers. Registrations driven by data.</p>
       </div>
     </div>
     <div class="sector-wide reveal">
       <div class="sector-wide-text">
-        <h3 data-i18n="sec5_title">+ Tous les business qui ont besoin de leads</h3>
-        <p data-i18n="sec5_body">E-commerce, restaurants, SaaS, services B2B, coaches, consultants... Si vous avez un produit ou service à vendre et besoin d'un flux de clients qualifiés — on peut travailler ensemble.</p>
+        <h3 data-i18n="sec5_title">+ All businesses that need leads</h3>
+        <p data-i18n="sec5_body">E-commerce, restaurants, SaaS, B2B services, coaches, consultants... If you have a product or service to sell and need a qualified client flow — we can work together.</p>
       </div>
-      <a href="#contact" class="btn-primary" style="flex-shrink:0" data-i18n="sec5_cta">Parlez-nous de votre projet →</a>
+      <a href="#contact" class="btn-primary" style="flex-shrink:0" data-i18n="sec5_cta">Tell us about your project →</a>
     </div>
   </div>
 </section>
@@ -1659,56 +1659,56 @@ footer {
 <section id="offre" class="section">
   <div class="container">
     <div class="offer-header reveal">
-      <div class="eyebrow" data-i18n="offer_eyebrow">Notre approche</div>
-      <h2 data-i18n="offer_h2">Pas de forfait. Une solution sur mesure.</h2>
+      <div class="eyebrow" data-i18n="offer_eyebrow">Our approach</div>
+      <h2 data-i18n="offer_h2">No package. A tailored solution.</h2>
     </div>
     <div class="offer-grid">
       <div class="offer-card reveal">
-        <span class="offer-badge" data-i18n="offer1_badge">Essentiel</span>
+        <span class="offer-badge" data-i18n="offer1_badge">Essential</span>
         <h3 data-i18n="offer1_title">Publicité & Performance</h3>
-        <p data-i18n="offer1_body">Gestion complète de vos campagnes Meta et/ou TikTok. Stratégie, création, optimisation, reporting. Le minimum pour avoir des résultats mesurables.</p>
+        <p data-i18n="offer1_body">Complete management of your Meta and/or TikTok campaigns. Strategy, creation, optimization, reporting. The minimum for measurable results.</p>
         <ul class="offer-features">
-          <li data-i18n="o1f1">Meta Ads et/ou TikTok Ads</li>
+          <li data-i18n="o1f1">Meta Ads and/or TikTok Ads</li>
           <li data-i18n="o1f2">Setup tracking & pixel</li>
-          <li data-i18n="o1f3">Optimisation continue</li>
-          <li data-i18n="o1f4">Rapport hebdomadaire</li>
+          <li data-i18n="o1f3">Continuous optimization</li>
+          <li data-i18n="o1f4">Weekly report</li>
         </ul>
         <div class="offer-price-note" data-i18n="offer1_price">Tarif selon budget & objectifs</div>
-        <a href="#contact" class="btn-outline" data-i18n="offer1_cta">En savoir plus →</a>
+        <a href="#contact" class="btn-outline" data-i18n="offer1_cta">Learn more →</a>
       </div>
 
       <div class="offer-card featured reveal" style="transition-delay:0.1s">
-        <span class="offer-badge featured-badge" data-i18n="offer2_badge">Recommandé</span>
-        <h3 data-i18n="offer2_title">Système d'acquisition complet</h3>
-        <p data-i18n="offer2_body">Publicité + chatbot IA + landing page + automation CRM. Chaque prospect est capturé, qualifié et relancé automatiquement. Vous ne perdez plus aucun lead.</p>
+        <span class="offer-badge featured-badge" data-i18n="offer2_badge">Recommended</span>
+        <h3 data-i18n="offer2_title">Complete acquisition system</h3>
+        <p data-i18n="offer2_body">Advertising + AI chatbot + landing page + CRM automation. Every prospect captured, qualified and followed up automatically. Zero leads lost.</p>
         <ul class="offer-features">
-          <li data-i18n="o2f1">Tout ce qui est dans Essentiel</li>
+          <li data-i18n="o2f1">Everything in Essential</li>
           <li data-i18n="o2f2">Chatbot IA multicanal</li>
-          <li data-i18n="o2f3">Landing page dédiée</li>
+          <li data-i18n="o2f3">Dedicated landing page</li>
           <li data-i18n="o2f4">Automation CRM & notifications</li>
-          <li data-i18n="o2f5">Rapport KPIs détaillé</li>
+          <li data-i18n="o2f5">Detailed KPI report</li>
         </ul>
-        <div class="offer-price-note" data-i18n="offer2_price">Solution la plus demandée</div>
-        <a href="#contact" class="btn-primary" data-i18n="offer2_cta">Démarrer maintenant →</a>
+        <div class="offer-price-note" data-i18n="offer2_price">Most requested solution</div>
+        <a href="#contact" class="btn-primary" data-i18n="offer2_cta">Start now →</a>
       </div>
 
       <div class="offer-card reveal" style="transition-delay:0.2s">
         <span class="offer-badge">Premium</span>
         <h3 data-i18n="offer3_title">Croissance & Automation avancée</h3>
-        <p data-i18n="offer3_body">Pour les business qui veulent aller plus loin. Multi-canal, email sequences, creative strategy, dashboard live et support prioritaire.</p>
+        <p data-i18n="offer3_body">For businesses that want to go further. Multi-channel, email sequences, creative strategy, live dashboard and priority support.</p>
         <ul class="offer-features">
-          <li data-i18n="o3f1">Tout ce qui est dans Système complet</li>
+          <li data-i18n="o3f1">Everything in Complete System</li>
           <li data-i18n="o3f2">TikTok Ads</li>
-          <li data-i18n="o3f3">Séquences email automatisées</li>
-          <li data-i18n="o3f4">Création de contenu IA</li>
-          <li data-i18n="o3f5">Dashboard live</li>
-          <li data-i18n="o3f6">Support prioritaire</li>
+          <li data-i18n="o3f3">Automated email sequences</li>
+          <li data-i18n="o3f4">AI content creation</li>
+          <li data-i18n="o3f5">Live dashboard</li>
+          <li data-i18n="o3f6">Priority support</li>
         </ul>
-        <div class="offer-price-note" data-i18n="offer3_price">Tarif sur devis</div>
-        <a href="#contact" class="btn-outline" data-i18n="offer3_cta">Nous contacter →</a>
+        <div class="offer-price-note" data-i18n="offer3_price">Custom quote</div>
+        <a href="#contact" class="btn-outline" data-i18n="offer3_cta">Contact us →</a>
       </div>
     </div>
-    <div class="offer-note reveal" data-i18n="offer_note">Vous gérez votre budget publicitaire directement avec Meta/TikTok. Nous gérons la stratégie et l'exécution.</div>
+    <div class="offer-note reveal" data-i18n="offer_note">You manage your ad budget directly with Meta/TikTok. We handle strategy and execution.</div>
   </div>
 </section>
 
@@ -1717,61 +1717,61 @@ footer {
   <div class="container" style="padding:100px 24px">
     <div class="faq-header reveal">
       <div class="eyebrow">FAQ</div>
-      <h2 data-i18n="faq_h2">Questions fréquentes</h2>
+      <h2 data-i18n="faq_h2">Frequently asked</h2>
     </div>
     <div class="faq-list">
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-question-text" data-i18n="q1">Comment travaillez-vous et depuis où ?</span>
+          <span class="faq-question-text" data-i18n="q1">Where are you based and how do you work?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="a1">Nous travaillons 100% à distance avec des clients en Europe, au Golfe, au Moyen-Orient et en Afrique du Nord. Tout se passe en ligne — appels, rapports, livrables. La qualité est exactement la même, où que vous soyez.</div>
+          <div class="faq-answer-inner" data-i18n="a1">We work 100% remotely with clients across Europe, the Gulf, the Middle East and North Africa. Everything online — calls, reports, deliverables. Quality is exactly the same, wherever you are.</div>
         </div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-question-text" data-i18n="q2">Quel est le budget publicitaire minimum ?</span>
+          <span class="faq-question-text" data-i18n="q2">What is the minimum advertising budget?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="a2">Nous recommandons au minimum 300€/mois en budget publicitaire pour générer des résultats significatifs. Ce budget va directement à Meta ou TikTok — pas à nous.</div>
+          <div class="faq-answer-inner" data-i18n="a2">We recommend at least €300/month in ad budget to generate meaningful results. This budget goes directly to Meta or TikTok — not to us.</div>
         </div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-question-text" data-i18n="q3">Comment se passe le paiement ?</span>
+          <span class="faq-question-text" data-i18n="q3">How does payment work?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="a3">Paiement mensuel. Pas d'engagement long terme — résiliation possible avec 15 jours de préavis. Vous ne payez que si vous continuez à voir des résultats.</div>
+          <div class="faq-answer-inner" data-i18n="a3">Monthly payment. No long-term commitment — cancellation with 15 days notice. You only pay if you keep seeing results.</div>
         </div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-question-text" data-i18n="q4">Quand verra-t-on les premiers résultats ?</span>
+          <span class="faq-question-text" data-i18n="q4">When will we see the first results?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="a4">Les premières conversations et leads arrivent généralement sous 48 à 72h après le lancement. Des résultats optimisés apparaissent après 2 à 3 semaines de données.</div>
+          <div class="faq-answer-inner" data-i18n="a4">First conversations and leads typically arrive within 48-72 hours after launch. Optimized results appear after 2-3 weeks of data.</div>
         </div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-question-text" data-i18n="q5">Proposez-vous un audit avant de commencer ?</span>
+          <span class="faq-question-text" data-i18n="q5">Do you offer an audit before starting?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="a5">Oui. On commence toujours par un appel découverte de 30 minutes — gratuit, sans engagement. On analyse votre situation et on vous dit honnêtement si on peut vous aider.</div>
+          <div class="faq-answer-inner" data-i18n="a5">Yes. We always start with a free 30-minute discovery call — no commitment. We analyze your situation and tell you honestly if we can help.</div>
         </div>
       </div>
       <div class="faq-item reveal">
         <button class="faq-question" onclick="toggleFaq(this)">
-          <span class="faq-question-text" data-i18n="q6">Que se passe-t-il si les résultats ne sont pas bons ?</span>
+          <span class="faq-question-text" data-i18n="q6">What if results are not good?</span>
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <div class="faq-answer-inner" data-i18n="a6">Transparence totale. Si une campagne sous-performe, on l'ajuste ou on l'arrête. Vous avez accès aux données en temps réel et on se parle chaque semaine.</div>
+          <div class="faq-answer-inner" data-i18n="a6">Full transparency. If a campaign underperforms, we adjust or stop it. You have real-time data access and we talk every week.</div>
         </div>
       </div>
     </div>
@@ -1783,26 +1783,26 @@ footer {
   <div class="container">
     <div class="contact-header reveal">
       <div class="eyebrow">Contact</div>
-      <h2 data-i18n="contact_h2">Prêt à transformer vos leads en clients ?</h2>
-      <p data-i18n="contact_subtitle">Réservez un appel découverte gratuit de 30 minutes. Pas de pitch agressif — juste une vraie conversation sur votre projet.</p>
+      <h2 data-i18n="contact_h2">Ready to turn your leads into clients?</h2>
+      <p data-i18n="contact_subtitle">Book a free 30-minute discovery call. No aggressive pitch — just a real conversation about your project.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info reveal">
         <a href="https://wa.me/213556744888" target="_blank" rel="noopener" class="whatsapp-btn">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          <span data-i18n="wa_btn">Écrire sur WhatsApp →</span>
+          <span data-i18n="wa_btn">Message on WhatsApp →</span>
         </a>
         <div class="contact-detail">
           <div class="contact-detail-label">Email</div>
           <a href="mailto:wssmaidat@gmail.com">wssmaidat@gmail.com</a>
         </div>
         <div class="contact-detail">
-          <div class="contact-detail-label" data-i18n="markets_label">Marchés</div>
+          <div class="contact-detail-label" data-i18n="markets_label">Markets</div>
           <span>Europe · Gulf &amp; Middle East · North Africa</span>
         </div>
         <div class="contact-detail">
-          <div class="contact-detail-label" data-i18n="response_label">Réponse</div>
-          <span data-i18n="response_val">Sous 24h ouvrées</span>
+          <div class="contact-detail-label" data-i18n="response_label">Response</div>
+          <span data-i18n="response_val">Within 24 business hours</span>
         </div>
       </div>
 
@@ -1817,7 +1817,7 @@ footer {
 
           <div class="form-row">
             <div class="form-group">
-              <label data-i18n="form_name">Nom</label>
+              <label data-i18n="form_name">Name</label>
               <input type="text" name="nom" class="form-control" required placeholder="John Doe">
             </div>
             <div class="form-group">
@@ -1830,23 +1830,23 @@ footer {
             <input type="tel" name="whatsapp" class="form-control" placeholder="+XX XXX XXX XXXX">
           </div>
           <div class="form-group">
-            <label data-i18n="form_sector">Secteur</label>
+            <label data-i18n="form_sector">Sector</label>
             <select name="secteur" class="form-control">
-              <option value="" data-i18n="form_select">-- Sélectionner --</option>
-              <option value="Immobilier" data-i18n="opt1">Immobilier / Real Estate</option>
-              <option value="Voyage" data-i18n="opt2">Agence de voyage / Travel</option>
-              <option value="Esthétique" data-i18n="opt3">Esthétique / Beauty</option>
-              <option value="Formation" data-i18n="opt4">Formation / Education</option>
+              <option value="" data-i18n="form_select">-- Select --</option>
+              <option value="Immobilier" data-i18n="opt1">Real Estate</option>
+              <option value="Voyage" data-i18n="opt2">Travel Agency</option>
+              <option value="Esthétique" data-i18n="opt3">Beauty / Aesthetic</option>
+              <option value="Formation" data-i18n="opt4">Education</option>
               <option value="E-commerce">E-commerce</option>
-              <option value="Autre" data-i18n="opt6">Autre / Other</option>
+              <option value="Autre" data-i18n="opt6">Other</option>
             </select>
           </div>
           <div class="form-group">
             <label>Message</label>
-            <textarea name="message" class="form-control" rows="4" data-i18n-placeholder="form_msg_placeholder" placeholder="Parlez-moi de votre activité, votre marché cible et vos objectifs..."></textarea>
+            <textarea name="message" class="form-control" rows="4" data-i18n-placeholder="form_msg_placeholder" placeholder="Tell me about your business, target market and goals..."></textarea>
           </div>
-          <button type="submit" class="btn-submit" id="submit-btn" data-i18n="form_submit">Envoyer ma demande</button>
-          <p class="form-note" data-i18n="form_note">Réponse sous 24h. Si urgent, WhatsApp est plus rapide.</p>
+          <button type="submit" class="btn-submit" id="submit-btn" data-i18n="form_submit">Send my request</button>
+          <p class="form-note" data-i18n="form_note">Reply within 24h. If urgent, WhatsApp is faster.</p>
         </form>
         <div class="form-success" id="form-success" data-i18n="form_success">✅ Message reçu ! Je vous réponds rapidement.</div>
       </div>
@@ -1870,9 +1870,9 @@ footer {
         <h4 data-i18n="footer_nav">Navigation</h4>
         <ul>
           <li><a href="#services" data-i18n="nav_services">Services</a></li>
-          <li><a href="#resultats" data-i18n="nav_results">Résultats</a></li>
+          <li><a href="#resultats" data-i18n="nav_results">Results</a></li>
           <li><a href="#processus" data-i18n="nav_process">Process</a></li>
-          <li><a href="#secteurs" data-i18n="nav_sectors">Secteurs</a></li>
+          <li><a href="#secteurs" data-i18n="nav_sectors">Industries</a></li>
           <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </div>
@@ -1886,7 +1886,7 @@ footer {
       </div>
     </div>
     <div class="footer-bottom">
-      <span data-i18n="footer_copy">© 2026 ADS Marketing. Tous droits réservés.</span>
+      <span data-i18n="footer_copy">© 2026 ADS Marketing. All rights reserved.</span>
 
     </div>
   </div>
@@ -2225,6 +2225,9 @@ function setLang(lang) {
     }
   });
 }
+
+// Init language
+document.addEventListener('DOMContentLoaded', () => setLang('en'));
 
 // ══════════════════════════════════════
 // SCROLL REVEAL
